@@ -1,0 +1,21 @@
+<div class="mat-nav">
+    <mat-toolbar color="primary">
+      <span>ResumeApp</span>
+    </mat-toolbar> 
+    </div>
+
+<section>
+    <h1>Upload Your CV File Here.. </h1>
+    <div class="file-upload">
+        <div class="file-details">
+           Name:<input type="text" placeholder="Enter Your Name">
+        </div>
+        <div class="file-details"> 
+           Email:<input type="email" placeholder="Enter Your Email Address">
+        </div>
+        <div class="file-upload-details">
+            <input type="file" (change)="onFileSelected($event)"> 
+            <button type="submit" >Upload</button>
+        </div>
+    </div>
+</section>
