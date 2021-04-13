@@ -8,6 +8,11 @@
   height: 100%;
 }
 
+#navigation {
+  top: -65px;
+  width: 100%;
+  transition: top 0.5s;
+}
 
 
 @media (min-width: 530px) {
@@ -97,3 +102,5 @@ mat-card {
   width: 200px;
 }
 }
+
+

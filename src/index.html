@@ -13,5 +13,19 @@
 <body class="mat-typography">
   <app-root></app-root>
 
+  <script>
+    window.onscroll = function() {
+      scrollFunction()
+    };
+    function scrollFunction() {
+      if ( document.body.scrollTop > 20 || document.getElementById.scrollFunction > 20 ) {
+        document.getElementById("navigation").style.top = "0";
+      }
+      else {
+        document.getElementById("navigation").style.top = "-65px";   
+      }
+    }
+  </script>
+
 </body>
 </html>

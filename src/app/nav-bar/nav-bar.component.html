@@ -8,16 +8,15 @@
       <mat-toolbar>Menu</mat-toolbar>
     
     <mat-nav-list>
-      <a mat-list-item routerLinkActive="active" routerLink="/nav-bar"> Home </a>
-      <a mat-list-item routerLinkActive="active" routerLink="/add-new" > Add New </a>
-      <a mat-list-item routerLink=""> Resume List </a>
-      <a mat-list-item routerLinkActive="active" routerLink="/contact-us">Contact Us</a>
-      <a mat-list-item routerLinkActive="active" routerLink="/about-us">About Us</a>
-      <a mat-list-item routerLinkActive="active" routerLink="/login">Log Out</a>
+      <a mat-list-item routerLinkActive="active" routerLink="/navbar"> Home </a>
+      <a mat-list-item routerLinkActive="active" routerLink="/addnew" > Add New </a>
+      <a mat-list-item routerLinkActive="active" routerLink="/contactus">Contact Us</a>
+      <a mat-list-item routerLinkActive="active" routerLink="/aboutus">About Us</a>
+      <a mat-list-item routerLinkActive="active" routerLink="/">Log Out</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary" fxlayout="row" fxlayoutAlign="space-between center">
+    <mat-toolbar id="navigation" color="primary" fxlayout="row" fxlayoutAlign="space-between center">
       <button 
         type="button" class="toggle-icon"
         aria-label="Toggle sidenav"
@@ -37,9 +36,10 @@
            <div class="spacer"></div>
            
            <div class="btn-navbar">
-            <button mat-button routerLinkActive="active" routerLink="/add-new" > <span class="material-icons"> add </span> </button>       
+            <button mat-button routerLinkActive="active" routerLink="/addnew" > <span class="material-icons"> add </span> </button>       
             <button mat-button routerLinkActive="active" routerLink="/notification"> <span class="material-icons"> notifications </span> </button>
-            <button mat-button> <mat-icon class="material-icons"> search </mat-icon> </button>
+            <button mat-button> <mat-icon class="material-icons" routerLink="/search"> search </mat-icon> </button>
+            <button mat-button> <mat-icon class="material-icons" routerLink="/"> logout </mat-icon> </button>
            </div>
      </mat-toolbar>
 
@@ -48,13 +48,10 @@
       <img src="../../assets/img/cv.jpg" alt="cv-img-item">
     </div>
 
-    <div>
+    
       <div> 
         <mat-tab-group mat-align-tabs="center">
-          <mat-tab label="Home">
-            <p></p>
-              </mat-tab>
-          <mat-tab  label="New Resume">
+          <mat-tab position="sticky"  label="New Resume">
           <div class="content">
             <div fxLayout="row wrap" fxLayoutGap="16px grid">
               <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let num of [1,2,3,4,5,6,7,8,9,10]">
@@ -73,7 +70,7 @@
             <div class="content">
               <div fxLayout="row wrap" fxLayoutGap="16px grid">
                 <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let num of [1,2,3,4,5,6,7]">
-                  <mat-card  >
+                  <mat-card>
                     <mat-card-header>
                       <mat-card-title>Resume {{num}}</mat-card-title>
                     </mat-card-header>
@@ -85,11 +82,7 @@
           </mat-tab>
         </mat-tab-group>
       </div>
-    </div>
     
   </section>
-     
-    
-    
   </mat-sidenav-content>
 </mat-sidenav-container>
